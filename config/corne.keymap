@@ -36,9 +36,9 @@
 // |     | UNDO | CUT | COPY | PASTE| |     |          | HOME| LFT | DWN | RGT| PRSC| SHFT(RET) |
 //                        |     |     |           | RET | ADJ |    |
                         bindings = <
-  &kp ESC    &kp N1      &kp N2    &kp N3       &kp N4      &kp N5    &kp N6 &kp N7 &kp N8 &kp N9 &kp N0  &kp DEL
-  &kp CLCK   &none       &none     &none.       &none       &none     &kp END  &kp PG_UP &kp UP    &kp PG_DN &kp QMARK &kp CARET
-  &none      &kp K_UNDO  &kp K_CUT &kp K_COPY   &kp K_PASTE &kp DQT   &kp HOME  &kp LEFT  &kp DOWN &kp RIGHT &kp PSCRN &mt RSHFT RET
+  &kp ESC    &kp N1      &kp N2    &kp N3       &kp N4      &kp N5    &kp N6   &kp N7    &kp N8    &kp N9    &kp N0    &kp DEL
+  &kp CLCK   &none       &none     &none        &none       &none     &kp END  &kp PG_UP &kp UP    &kp PG_DN &kp QMARK &kp CARET
+  &none      &kp K_UNDO  &kp K_CUT &kp K_COPY   &kp K_PASTE &kp DQT   &kp HOME &kp LEFT  &kp DOWN  &kp RIGHT &kp PSCRN &mt RSHFT RET
                             &trans      &trans     &trans          &kp RET        &mo 3       &trans
                         >;
                 };
@@ -46,7 +46,7 @@
                // -----------------------------------------------------------------------------------------
       // |  ESC |  !  |  @  |  #  |  $  |  %  |   |  &  |  /  |  (  |  )  |  =  | BKSP |
       // | CTRL |     |     |     |     |     |   |  -  |  *  |  [  |  ]  |  \  |  `   |
-      // | <    |   >  |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
+      // | <    |   > |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
       //                    | GUI | LWR | SPC |   | ENT | RSE | ALT |
       raise_layer {
          bindings = <
@@ -64,7 +64,7 @@
 // | RGB BRI- | RGB SAT- | RGB HUE- | RGB ANI- |    |         |   |    USB  |   BLE |K_SLEEP  |       |       |  RESET |
 //                                              |     |     |     |     |     |
                         bindings = <
-   &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6                                                             &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &kp F12         
+   &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6                                                              &kp F7       &kp F8.      &kp F9.      &kp F10      &kp F11      &kp F12         
    &rgb_ug RGB_BRI &rgb_ug RGB_SAI &rgb_ug RGB_HUI &rgb_ug RGB_EFF &none        &rgb_ug RGB_TOG           &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &bt BT_CLR
    &rgb_ug RGB_BRD &rgb_ug RGB_SAD &rgb_ug RGB_HUD &rgb_ug RGB_EFR &none        &none                     &out OUT_USB &out OUT_BLE &kp K_SLEEP        &none        &none        &none
                                                    &trans          &trans       &trans                    &tog 3       &trans       &trans

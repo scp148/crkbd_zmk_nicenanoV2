@@ -34,7 +34,7 @@
 // | º   |  1   |  2  |  3   |  4     |  5  |          |  6  |  7  |  8  |  9  |  0  |    DEL   |
 // | CAPS|      |     |      |        |     |          | END | PGUP|  UP |PGDN|  ?   |     ^     |
 // |     | UNDO | CUT | COPY | PASTE| |     |          | HOME| LFT | DWN | RGT| PRSC| SHFT(RET) |
-//                        |     |     |           | RET | ADJ |    |
+//                              |     |     |          | RET | ADJ |    |
                         bindings = <
   &kp ESC    &kp N1      &kp N2    &kp N3       &kp N4      &kp N5    &kp N6   &kp N7    &kp N8    &kp N9    &kp N0    &kp DEL
   &kp CLCK   &none       &none     &none        &none       &none     &kp END  &kp PG_UP &kp UP    &kp PG_DN &kp QMARK &kp CARET
@@ -50,10 +50,10 @@
       //                    | GUI | LWR | SPC |   | ENT | RSE | ALT |
       raise_layer {
          bindings = <
-            &kp ESC &kp EXCL &kp AT &kp HASH &kp DLLR  &kp AMPS &kp SLASH &kp LPAR &kp RPAR  &kp EQUAL  &trans
-            &kp LCTRL &none &none &none &none &none   &kp MINUS &kp EQUAL &kp LBKT &kp RBKT &kp BSLH &kp GRAVE
-            &kp LT &kp GT &none &none &none &none   &kp UNDER &kp PLUS  &kp LBRC &kp RBRC &kp PIPE &kp TILDE
-                          &kp LGUI &trans &kp SPACE   &kp RET &trans &kp RALT
+            &kp ESC   &kp EXCL &kp AT   &kp HASH  &kp DLLR   &kp PRCNT      &kp AMPS  &kp SLASH &kp LPAR  &kp RPAR  &kp EQUAL  &trans
+            &kp LCTRL &none    &none    &none     &none      &none          &kp MINUS &kp EQUAL &kp LBKT  &kp RBKT   &kp BSLH &kp GRAVE
+            &kp LT    &kp GT   &none    &none     &none      &none          &kp UNDER &kp PLUS  &kp LBRC  &kp RBRC   &kp PIPE &kp TILDE
+                                        &kp LGUI  &trans     &kp SPACE      &kp RET   &trans    &kp RALT
          >;
                 };
 
@@ -64,7 +64,7 @@
 // | RGB BRI- | RGB SAT- | RGB HUE- | RGB ANI- |    |         |   |    USB  |   BLE |K_SLEEP  |       |       |  RESET |
 //                                              |     |     |     |     |     |
                         bindings = <
-   &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6                                                              &kp F7       &kp F8.      &kp F9.      &kp F10      &kp F11      &kp F12         
+   &kp F1   &kp F2 &kp F3 &kp F4 &kp F5 &kp F6                                                              &kp F7       &kp F8      &kp F9      &kp F10      &kp F11      &kp F12         
    &rgb_ug RGB_BRI &rgb_ug RGB_SAI &rgb_ug RGB_HUI &rgb_ug RGB_EFF &none        &rgb_ug RGB_TOG           &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &bt BT_CLR
    &rgb_ug RGB_BRD &rgb_ug RGB_SAD &rgb_ug RGB_HUD &rgb_ug RGB_EFR &none        &none                     &out OUT_USB &out OUT_BLE &kp K_SLEEP        &none        &none        &none
                                                    &trans          &trans       &trans                    &tog 3       &trans       &trans

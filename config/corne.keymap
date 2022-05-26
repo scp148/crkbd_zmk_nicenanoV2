@@ -32,27 +32,27 @@
                 lower_layer {
 // ----------------------------------------------------------------------------------
 // |  ESC |  1   |  2  |  3   |  4     |  5  |          |  6  |  7  |  8  |  9  |  0   |    DEL   |
-// |  CAPS|      |     |      |        |     |          | END | PGUP|  UP |PGDN |  ?   |     ^    |
-// | SHFT | UNDO | CUT | COPY | PASTE| |     |          | HOME| LFT | DWN | RGT | PRSC | SHFT(RET)|
+// |  CAPS|      |     |      |        |     |          | HOME| PGUP|  UP |PGDN |  ?   |     ^    |
+// | SHFT | UNDO | CUT | COPY | PASTE| |     |          | END | LFT | DWN | RGT | PRSC | SHFT(RET)|
 //                              |     |     |          | RET | ADJ |    |
                         bindings = <
-  &kp ESC    &kp N1      &kp N2    &kp N3       &kp N4      &kp N5    &kp N6   &kp N7    &kp N8    &kp N9    &kp N0    &kp DEL
-  &kp CLCK   &none       &none     &none        &none       &none     &kp END  &kp PG_UP &kp UP    &kp PG_DN &kp QMARK &kp CARET
-  &kp LSHFT  &kp UNDO  &kp CUT &kp COPY   &kp PSTE &kp DQT   &kp HOME &kp LEFT  &kp DOWN  &kp RIGHT &kp PSCRN &mt RSHFT RET
-                            &trans      &trans     &trans          &kp RET        &mo 3       &trans
+  &kp ESC    &kp N1      &kp N2    &kp N3       &kp N4      &kp N5       &kp N6    &kp N7    &kp N8    &kp N9    &kp N0    &kp DEL
+  &kp CLCK   &none       &none     &none        &none       &none        &kp HOME  &kp PG_UP &kp UP    &kp PG_DN &kp QMARK &kp CARET
+  &kp LSHFT  &kp UNDO    &kp CUT   &kp COPY     &kp PSTE    &kp DQT      &kp END   &kp LEFT  &kp DOWN  &kp RIGHT &kp PSCRN &mt RSHFT RET
+                                      &trans      &trans     &trans      &kp RET   &mo 3    &trans
                         >;
                 };
 
                // -----------------------------------------------------------------------------------------
       // |  ESC |  !  |  @  |  #  |  $  |  %  |   |  &  |  /  |  (  |  )  |  =  | BKSP |
-      // | CTRL |     |     |     |     |     |   |  -  |  *  |  [  |  ]  |  \  |  `   |
+      // | CTRL |   ? |     |     |     |     |   |  -  |  *  |  [  |  ]  |  \  |  `   |
       // | <    |   > |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
       //                    | GUI | LWR | SPC |   | ENT | RSE | ALT |
       raise_layer {
          bindings = <
-            &kp ESC   &kp EXCL &kp AT   &kp HASH  &kp DLLR   &kp PRCNT      &kp AMPS  &kp SLASH &kp LPAR  &kp RPAR  &kp EQUAL  &trans
-            &kp LCTRL &none    &none    &none     &none      &none          &kp MINUS &kp ASTRK &kp LBKT  &kp RBKT   &kp BSLH &kp GRAVE
-            &kp LT    &kp GT   &none    &none     &none      &none          &kp UNDER &kp PLUS  &kp LBRC  &kp RBRC   &kp PIPE &kp TILDE
+            &kp ESC   &kp EXCL  &kp AT   &kp HASH  &kp DLLR   &kp PRCNT      &kp AMPS  &kp SLASH &kp LPAR  &kp RPAR  &kp EQUAL  &trans
+            &kp LCTRL &kp QMARK &none    &none     &none      &none          &kp MINUS &kp ASTRK &kp LBKT  &kp RBKT   &kp BSLH &kp GRAVE
+            &kp LT    &kp GT    &none    &none     &none      &none          &kp UNDER &kp PLUS  &kp LBRC  &kp RBRC   &kp PIPE &kp TILDE
                                         &kp LGUI  &trans     &kp SPACE      &kp RET   &trans    &kp RALT
          >;
                 };

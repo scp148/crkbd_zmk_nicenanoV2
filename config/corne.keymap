@@ -32,12 +32,12 @@
 
                 lower_layer {
 // ----------------------------------------------------------------------------------
-// |  ESC |  1   |  2  |  3   |  4     |  5  |          |  6  |  7  |  8  |  9  |  0   |    DEL   |
+// |  ESC |  1   |  2  |  3   |  4     |  5  |          |  6  |  7  |  8  |  9  |  0   |    BKSP   |
 // |  CAPS|      |     |      |        |     |          | HOME| PGUP|  UP |PGDN |  ?   |     ^    |
 // | SHFT | UNDO | CUT | COPY | PASTE| |     |          | END | LFT | DWN | RGT | PRSC | SHFT(RET)|
 //                              |     |     |          | RET | ADJ |    |
                         bindings = <
-  &kp ESC    &kp N1      &kp N2    &kp N3       &kp N4      &kp N5       &kp N6    &kp N7    &kp N8    &kp N9    &kp N0    &kp DEL
+  &kp ESC    &kp N1      &kp N2    &kp N3       &kp N4      &kp N5       &kp N6    &kp N7    &kp N8    &kp N9    &kp N0     &kp BSPC
   &kp CLCK   &none       &none     &none        &none       &none        &kp HOME  &kp PG_UP &kp UP    &kp PG_DN &kp QMARK &kp CARET
   &kp LSHFT  &kp UNDO    &kp CUT   &kp COPY     &kp PSTE    &kp DQT      &kp END   &kp LEFT  &kp DOWN  &kp RIGHT &kp PSCRN &mt RSHFT RET
                                       &trans      &trans     &trans      &kp RET   &mo 3    &trans
@@ -61,13 +61,13 @@
                 adjust_layer {
 // -----------------------------------------------------------------------------------------
 // |  F1      |  F2      |  F3      | F4       | F5    |  F6     |   |    F7   |   F8  |    F9   |   F10 |   F11 | F12    |
-// | RGB BRI+ | RGB SAT+ | RGB HUE+ | RGB ANI+ |       | RGB TOG |   |    BT1  |   BT2 |   BT3   |   BT4 |   BT5 | BT CLR |
-// | RGB BRI- | RGB SAT- | RGB HUE- | RGB ANI- |       | BL TOG  |   |    USB  |   BLE |K_SLEEP  |EP TOG |       |  RESET |
+// | RGB BRI+ | RGB SAT+ | RGB HUE+ | RGB ANI+ | EP_ON | RGB TOG |   |    BT1  |   BT2 |   BT3   |   BT4 |   BT5 | BT CLR |
+// | RGB BRI- | RGB SAT- | RGB HUE- | RGB ANI- | EP_OFF| BL TOG  |   |    USB  |   BLE |K_SLEEP  |EP TOG |       |  RESET |
 //                                              |     |     |     |     |     |
                         bindings = <
-   &kp F1   &kp F2 &kp F3 &kp F4 &kp F5 &kp F6                                                              &kp F7       &kp F8      &kp F9      &kp F10      &kp F11      &kp F12         
-   &rgb_ug RGB_BRI &rgb_ug RGB_SAI &rgb_ug RGB_HUI &rgb_ug RGB_EFF &none        &rgb_ug RGB_TOG           &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &bt BT_CLR
-   &rgb_ug RGB_BRD &rgb_ug RGB_SAD &rgb_ug RGB_HUD &rgb_ug RGB_EFR &none        &bl BL_TOG                 &out OUT_USB &out OUT_BLE &kp K_SLEEP      &ext_power EP_TOG       &none        &none
+   &kp F1          &kp F2          &kp F3.         &kp F4          &kp F5            &kp F6                    &kp F7       &kp F8       &kp F9       &kp F10             &kp F11      &kp F12         
+   &rgb_ug RGB_BRI &rgb_ug RGB_SAI &rgb_ug RGB_HUI &rgb_ug RGB_EFF &ext_power EP_ON  &rgb_ug RGB_TOG           &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3        &bt BT_SEL 4 &bt BT_CLR
+   &rgb_ug RGB_BRD &rgb_ug RGB_SAD &rgb_ug RGB_HUD &rgb_ug RGB_EFR &ext_power EP_OFF &bl BL_TOG                &out OUT_USB &out OUT_BLE &kp K_SLEEP  &ext_power EP_TOG   &none        &none
                                                    &trans          &trans       &trans                    &tog 3       &trans       &trans
                         >;
                 };

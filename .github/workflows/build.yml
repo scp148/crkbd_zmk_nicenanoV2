@@ -15,20 +15,19 @@ jobs:
         with:
           python-version: 3.11
 
-      # Step 3: Install dependencies
+      # Step 3: Install required Python packages (without requirements.txt)
       - name: Install dependencies
         run: |
-          pip install -r requirements.txt
+          pip install west packaging
 
-      # Step 4: Set up the ZMK environment (clone or prepare dependencies)
-      - name: Install West and ZMK
+      # Step 4: Set up the ZMK environment
+      - name: Initialize ZMK environment
         run: |
-          pip install west
           west init -l app/
           west update
           west zephyr-export
 
-      # Step 5: Build the ZMK firmware
+      # Step 5: Build firmware
       - name: Build firmware
         run: |
           west build -p auto -b your_board_name -- your_build_options

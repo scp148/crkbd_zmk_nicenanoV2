@@ -2,6 +2,33 @@ on: [push, pull_request, workflow_dispatch]
 
 jobs:
   build:
-    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
-    with:
-      python-version: '3.11'
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Check out the repository
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Step 2: Set up Python 3.11
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.11
+
+      # Step 3: Install dependencies
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+
+      # Step 4: Set up the ZMK environment (clone or prepare dependencies)
+      - name: Install West and ZMK
+        run: |
+          pip install west
+          west init -l app/
+          west update
+          west zephyr-export
+
+      # Step 5: Build the ZMK firmware
+      - name: Build firmware
+        run: |
+          west build -p auto -b your_board_name -- your_build_options
